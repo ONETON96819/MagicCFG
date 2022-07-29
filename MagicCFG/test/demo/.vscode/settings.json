@@ -1,0 +1,15 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "": true,
+        "**/.hg": false,
+        "**/CVS": false
+    },
+    "arduino.defaultTimestampFormat": "m: the month, padded to 2 digits (01-12)",
+    "arduino.disableIntelliSenseAutoGen": true,
+    "arduino.path": "'/Applications'",
+    "arduino.useArduinoCli": true,
+    "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
+    "C_Cpp.debugger.useBacktickCommandSubstitution": true
+}

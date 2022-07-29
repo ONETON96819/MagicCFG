@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,7 +43,7 @@
 		E417CC6A249EBA2000876CD7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417CC68249EBA2000876CD7 /* StartViewController.swift */; };
 		E41FC09E24AE50B100E6F35D /* iCloudUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FC09D24AE50B100E6F35D /* iCloudUnlockViewController.swift */; };
 		E4214CF624A63C5900763B57 /* devices.json in Resources */ = {isa = PBXBuildFile; fileRef = E4214CF524A63C5900763B57 /* devices.json */; };
-		E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = E424D52C2493C3F300ECE732 /* ORSSerial */; };
+		E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = E424D52C2493C3F300ECE732 /* ORSSerial */; settings = {ATTRIBUTES = (Required, ); }; };
 		E44068CB258F5A8400DB8C54 /* avrdude in Resources */ = {isa = PBXBuildFile; fileRef = E44068C9258F5A8300DB8C54 /* avrdude */; };
 		E44068CC258F5A8400DB8C54 /* avrdude.conf in Resources */ = {isa = PBXBuildFile; fileRef = E44068CA258F5A8400DB8C54 /* avrdude.conf */; };
 		E44068D0258F5A9B00DB8C54 /* 8940.bin in Resources */ = {isa = PBXBuildFile; fileRef = E44068CD258F5A9900DB8C54 /* 8940.bin */; };
@@ -65,6 +65,20 @@
 		E4E16457258F50CA00DDA6D5 /* Checkm8duinoFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E16456258F50CA00DDA6D5 /* Checkm8duinoFlash.swift */; };
 		E4E7859024A244840021868B /* SYSCFG_TEMPLATES in Resources */ = {isa = PBXBuildFile; fileRef = E4E7858F24A244830021868B /* SYSCFG_TEMPLATES */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		54D4042C28208B1100C3CDA6 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.rcproject;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# rctool\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		806CCAF425273CD500C41A74 /* Embed Libraries */ = {
@@ -290,6 +304,7 @@
 				D3AAD556ED972A9F84FABA0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
+				54D4042C28208B1100C3CDA6 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -309,6 +324,7 @@
 		E4793DFB2492B934000ED452 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				KnownAssetTags = (
 					New,
 				);
@@ -411,6 +427,7 @@
 		E4AC27EC24B2378100322E1E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
+			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
 			files = (
 			);
 			inputFileListPaths = (
@@ -538,6 +555,7 @@
 		};
 		E4793E122492B936000ED452 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE94F89C7A6AD2A86BEBC79E /* Pods-MagicCFG.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -592,7 +610,7 @@
 		};
 		E4793E142492B936000ED452 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35DACC4C1E8FC59A5A31179E /* Pods-MagicCFG.debug.xcconfig */;
+			baseConfigurationReference = DE94F89C7A6AD2A86BEBC79E /* Pods-MagicCFG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -660,7 +678,7 @@
 		};
 		E4793E152492B936000ED452 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE94F89C7A6AD2A86BEBC79E /* Pods-MagicCFG.release.xcconfig */;
+			baseConfigurationReference = 35DACC4C1E8FC59A5A31179E /* Pods-MagicCFG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -721,7 +739,7 @@
 				E4793E122492B936000ED452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E4793E132492B936000ED452 /* Build configuration list for PBXNativeTarget "MagicCFG" */ = {
 			isa = XCConfigurationList;
@@ -730,7 +748,7 @@
 				E4793E152492B936000ED452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
