@@ -1,0 +1,7 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "spring.initializr.defaultJavaVersion": "15",
+    "spring.initializr.defaultOpenProjectMethod": "Add to Workspace",
+    "spring.initializr.defaultPackaging": "JAR",
+    "spring.initializr.defaultGroupId": "com.oneton"
+}
